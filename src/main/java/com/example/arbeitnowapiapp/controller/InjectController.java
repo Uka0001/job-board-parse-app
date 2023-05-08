@@ -1,5 +1,7 @@
 package com.example.arbeitnowapiapp.controller;
 
+import static java.util.Objects.nonNull;
+
 import com.example.arbeitnowapiapp.dto.JobApiResponseDto;
 import com.example.arbeitnowapiapp.dto.JobDto;
 import com.example.arbeitnowapiapp.mapper.JobMapper;
@@ -7,15 +9,12 @@ import com.example.arbeitnowapiapp.model.Job;
 import com.example.arbeitnowapiapp.service.HttpClient;
 import com.example.arbeitnowapiapp.service.JobService;
 import jakarta.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 @Controller
 @RequiredArgsConstructor
@@ -34,7 +33,7 @@ public class InjectController {
         JobApiResponseDto dto = client.get(arbeitnowUrl, JobApiResponseDto.class);
         List<JobDto> jobDtoList = new ArrayList<>(dto.data());
         int pageNumber = PAGE_START_ITERATION_NUMBER;
-        while(nonNull(dto.links().next()) && pageNumber <= PAGE_FINISH_ITERATION_NUMBER) {
+        while (nonNull(dto.links().next()) && pageNumber <= PAGE_FINISH_ITERATION_NUMBER) {
             pageNumber++;
             dto = client.get(arbeitnowUrl, JobApiResponseDto.class);
             jobDtoList.addAll(dto.data());

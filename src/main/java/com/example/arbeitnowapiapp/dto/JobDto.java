@@ -1,7 +1,6 @@
 package com.example.arbeitnowapiapp.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.List;
 
 public record JobDto(

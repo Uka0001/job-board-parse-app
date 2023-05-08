@@ -6,10 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Getter
 @Setter
@@ -18,8 +17,8 @@ import java.util.List;
 public class JobTag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String tag;
+    private Long id;
+    private String tag;
     @ManyToMany(mappedBy = "jobTypes")
     private List<Job> jobTypes;
 }
