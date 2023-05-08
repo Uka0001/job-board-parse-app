@@ -19,10 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class JobController {
     private final JobService service;
     private final JobMapper mapper;
+
     @GetMapping
-    public List<JobDto> getAllJobs(@RequestParam (defaultValue = "20") Integer count,
-                                   @RequestParam (defaultValue = "0") Integer page,
-                                   @RequestParam (defaultValue = "id") String sortBy) {
+    public List<JobDto> getAllJobs(@RequestParam(defaultValue = "20") Integer count,
+                                   @RequestParam(defaultValue = "0") Integer page,
+                                   @RequestParam(defaultValue = "id") String sortBy) {
         Sort sort = Sort.by(sortBy);
         PageRequest pageRequest = PageRequest.of(page, count, sort);
         return service.findAll(pageRequest).stream()

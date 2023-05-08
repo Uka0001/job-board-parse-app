@@ -4,9 +4,8 @@ import com.example.arbeitnowapiapp.dto.JobDto;
 import com.example.arbeitnowapiapp.model.Job;
 import com.example.arbeitnowapiapp.model.JobTag;
 import com.example.arbeitnowapiapp.model.JobType;
-import org.springframework.stereotype.Component;
-
 import java.time.Instant;
+import org.springframework.stereotype.Component;
 
 @Component
 public class JobMapper {

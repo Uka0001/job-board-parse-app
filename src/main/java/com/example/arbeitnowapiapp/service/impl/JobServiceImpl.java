@@ -6,7 +6,6 @@ import com.example.arbeitnowapiapp.mapper.JobMapper;
 import com.example.arbeitnowapiapp.model.Job;
 import com.example.arbeitnowapiapp.repository.JobRepository;
 import com.example.arbeitnowapiapp.service.JobService;
-
 import java.util.Comparator;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -36,7 +35,10 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public List<Job> findAllJobsBySlugsAndCreationTime(Job job) {
-        List<Job> jobList = jobRepository.findAllBySlugsAndCreationTime(job.getSlug(), job.getCreatedAt());
+        List<Job> jobList
+                = jobRepository.findAllBySlugsAndCreationTime(
+                job.getSlug(),
+                job.getCreatedAt());
         return jobList;
     }
 
