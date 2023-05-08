@@ -41,6 +41,7 @@ public class InjectController {
         }
         List<Job> jobList = jobDtoList.stream()
                 .map(mapper::toModel)
+                .filter(job -> service.findAllJobsBySlugsAndCreationTime(job).isEmpty())
                 .toList();
         service.saveAll(jobList);
     }
