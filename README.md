@@ -21,6 +21,8 @@ https://www.arbeitnow.com/api/job-board-api
 - Hibernate
 - Spring Doc
 - Swagger
+- Junit
+- Mockito
 - Lombok
 - Cron job
 - REST, DTO and other patterns
