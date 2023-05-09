@@ -26,11 +26,11 @@ https://www.arbeitnow.com/api/job-board-api
 - REST, DTO and other patterns
 
 # REST endpoints:
-/jobs - get all vacancies
-/jobs/{id} - get vacancy by id
-/jobs/top-viewed - get top n (by default 10) most viewed vacancies in descending order
-/jobs/recent - get top n (by default 10) recent vacancies in descending order
-/jobs/city - get method to achieve list of cities with number of vacancies in each
+- /jobs - get all vacancies
+- /jobs/{id} - get vacancy by id
+- /jobs/top-viewed - get top n (by default 10) most viewed vacancies in descending order
+- /jobs/recent - get top n (by default 10) recent vacancies in descending order
+- /jobs/city - get method to achieve list of cities with number of vacancies in each
 
 ## 🖥️ BackEnd Project SetUp:
 - Clone this repo.
