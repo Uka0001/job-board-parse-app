@@ -43,4 +43,11 @@ public class Job {
     private long createdAt;
     private int views;
 
+    public Job() {
+    }
+
+    public Job(String slug, long createdAt) {
+        this.slug = slug;
+        this.createdAt = createdAt;
+    }
 }
