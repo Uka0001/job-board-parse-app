@@ -42,4 +42,5 @@ public class Job {
     private String location;
     private long createdAt;
     private int views;
+
 }

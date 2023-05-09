@@ -32,7 +32,6 @@ https://www.arbeitnow.com/api/job-board-api
 /jobs/recent - get top n (by default 10) recent vacancies in descending order
 /jobs/city - get method to achieve list of cities with number of vacancies in each
 
-
 ## 🖥️ BackEnd Project SetUp:
 - Clone this repo.
 - Create application.properties file in src/main/resources folder
