@@ -55,7 +55,7 @@ http://localhost:8080/swagger-ui.html
 
 ## Video Presentation
 You can check how the app work in this video presentation:
-https://www.loom.com/share/ff91fdcc8dca4a07b043ebaecce684a1
+[https://www.loom.com/share/ff91fdcc8dca4a07b043ebaecce684a1](https://www.loom.com/share/12bbdd74e635495e946245b519cae896)
 
 _____
 Good luck. With :hearts: love from :ukraine: Ukraine! :smiley:
