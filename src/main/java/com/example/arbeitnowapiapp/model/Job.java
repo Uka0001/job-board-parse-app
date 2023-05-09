@@ -41,4 +41,6 @@ public class Job {
     private List<JobType> jobTypes;
     private String location;
     private long createdAt;
+    private int views;
+
 }

@@ -1,6 +1,7 @@
 package com.example.arbeitnowapiapp.mapper;
 
 import com.example.arbeitnowapiapp.dto.JobDto;
+import com.example.arbeitnowapiapp.dto.ViewDto;
 import com.example.arbeitnowapiapp.model.Job;
 import com.example.arbeitnowapiapp.model.JobTag;
 import com.example.arbeitnowapiapp.model.JobType;
@@ -28,6 +29,26 @@ public class JobMapper {
                 model.getSlug(),
                 model.getCompanyName(),
                 model.getTitle(),
+                model.getDescription(),
+                model.isRemote(),
+                model.getUrl(),
+                model.getTags().stream()
+                        .map(JobTag::getTag)
+                        .toList(),
+                model.getJobTypes().stream()
+                        .map(JobType::getType)
+                        .toList(),
+                model.getLocation(),
+                model.getCreatedAt()
+        );
+    }
+
+    public ViewDto toViewDto(Job model) {
+        return new ViewDto(
+                model.getSlug(),
+                model.getCompanyName(),
+                model.getTitle(),
+                model.getViews(),
                 model.getDescription(),
                 model.isRemote(),
                 model.getUrl(),
